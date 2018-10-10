@@ -414,14 +414,34 @@ Eine Fein-Optimierung des Bildes kann jetzt noch mit den verschiedenen Bildbearb
 \section{Auswertung}
 \subsection{Altersbestimmung der Mondoberfläche}
 
-Nachdem ein Mondbild fertig geschärft ist, muss zur Bestimmung des Oberflächenalters die Region in einem Mondatlas bestimmt werden. Ist die Region bekannt, muss die im Bild sichtbare Fläche berechnet werden. Dazu bietet es sich an, die Längen- und Breitengrade zur Eingrenzung eines Bereichs zu nutzen. Schließlich muss ein Maßstab festgelegt werden, um die Größe der Krater bestimmen zu können. Nur Krater mit einem Durchmesser von mehr als $\SI{20}{km}$ dürfen gezählt werden. Dabei ist darauf zu achten, dass der Maßstab nur in der Senkrechten zum Radius annähernd korrekt ist, also quasi die lange Achse der Ellipsen! Mit der Annahme, dass die Krater auf der Oberfläche fast rund sind, kann das Verhältnis aus langer zu kurzer Achse genutzt werden, um die Distanzen in der näheren Umgebung in radialer Richtung zu normieren.
+Anhand der Kraterdichte kann das Alter der Mondoberfläche bestimmt werden. Die Kraterdichte ist die Anzahl der Einschlagskrater pro Quadratkilometer. Um ein Rechteck mit bekannter Seitenlänge über das Bild zu legen, muss zunächst der Maßstab berechnet werden. Hierzu können 2 verschiedene Wege genutzt werden: Entweder kann mittels Mondatlas die Größe eines Referenzkraters in einer gewählten Region bestimmt werden. Oder es wird über die optischen Eigenschaften des Teleskops und der Kamera der Abbildungsmaßstab berechnet.
+
+Nach \ref{eq:bildgroesse} ist die Bildgröße des Mondes leicht zu berechnen. Das Bild entspricht dem Gesamtdurchmesser des Mondes von annähernd $d = \SI{3500}{km}$. Die Größe der Kamerachips oder die Pixelgröße ist bekannt. Der Maßstab $M$ in Kilometer pro Pixel kann berechnet werden durch
+
+\begin{equation}
+M = \frac{s_{px}}{B} \cdot \SI{3500}{km}
+\label{eq:masstab}
+\end{equation}
+
+VORSICHT: Dieser Maßstab bezieht die Wölbung des Mondbildes noch nicht mit ein. Der Maßstab ist daher nur in einem kleinen Bereich in der Mitte des Mondes annähernd richtig, beziehungsweise entlang einer Kreislinie, deren Mittelpunkt im Mondzentrum liegt.
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=1\textwidth]{Mondkrater}
+  \caption{Die Mondoberfläche aufgenommen mit der ALccd 5L-IIm und dem Refraktor. Bei einer Brennweite von $f = \SI{2,25}{m}$ ist das Bild ungefähr $B \approx \SI{2}{cm}$ groß. Entlang der roten Linie (große Achse, rote Linie) hat der Krater einen Durchmesser von $39,4 px$. Das entspricht nach Gleichung \ref{eq:masstab} einer Distanz von $\SI{25,5}{km}$. Die kleine Achse (gelb) hat eine Länge von $\SI{19,2}{px}$. Eine Region mit $\SI{10000}{km^2}$ hat hat daher eine Kantenlänge von $\SI{154,4}{px}$ in tangentialer Richtung, sowie $\SI{75,3}{px}$ in radialer Richtung (blau).}
+  \label{fig:mondkrater}
+\end{figure}
+
+Wir nehmen an, dass die meisten Krater näherungsweise kreisrund sind. Deswegen kann die - nur durch die optische Verzerrung existierende - lange Halbachse in Pixeln gemessen und mit dem Maßstab multipliziert werden. Das Verhältnis aus kleiner und großer Halbachse ergibt dann den Maßstab in radialer Richtung.
 
 \begin{figure}[h!]
   \centering
     \includegraphics[width=0.5\textwidth]{Altersbestimmung_Mondoberflaeche}
   \caption{Alter der Mondoberfläche in Abhängigkeit von der Kraterdichte. Quelle: \url{http://www.lpi.usra.edu/publications/books/geologyTerraPlanets/GeologyTerrestrialPlanets.pdf}}
-  \label{fig:ezplanetary}
+  \label{fig:crateringrate}
 \end{figure}
+
+Anschließend kann ein Rechteck mit der Kantenlänge $\SI{100}{km}$ definiert werden, in dem die Krater gezählt werden können. Nur Krater mit einem Durchmesser von mehr als $\SI{20}{km}$ dürfen gezählt werden. Die Zahl muss anschließend auf Krater pro Quadratkilometer normiert werden. Mit dieser Zahl kann aus Abbildung \ref{fig:crateringrate} das Alter der Region bestimmt werden.
 
 \bibliography{references1.bib}{}
 \bibliographystyle{plain}
