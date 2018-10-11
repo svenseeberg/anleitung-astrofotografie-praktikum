@@ -414,7 +414,9 @@ Eine Fein-Optimierung des Bildes kann jetzt noch mit den verschiedenen Bildbearb
 \section{Auswertung}
 \subsection{Altersbestimmung der Mondoberfläche}
 
-Anhand der Kraterdichte kann das Alter der Mondoberfläche bestimmt werden. Die Kraterdichte ist die Anzahl der Einschlagskrater pro Quadratkilometer. Um ein Rechteck mit bekannter Seitenlänge über das Bild zu legen, muss zunächst der Maßstab berechnet werden. Hierzu können 2 verschiedene Wege genutzt werden: Entweder kann mittels Mondatlas die Größe eines Referenzkraters in einer gewählten Region bestimmt werden. Oder es wird über die optischen Eigenschaften des Teleskops und der Kamera der Abbildungsmaßstab berechnet.
+\noindent\fbox{\parbox{\textwidth}{\textbf{Hinweis:} Die Berechnung des Oberflächenalters ist nur eine grobe Näherung. Dafür gibt es drei Ursachen: Erstens ist die Bestimmung eines Flächenelements von genau $\SI{10000}{km^2}$ schwierig. Wir benutzen hier nur eine grobe Näherung. Zweitens ist das Ablesen des Alters aus dem Diagramm \ref{fig:crateringrate} unpräzise. Und drittens sind nur vergleichsweise wenige Messpunkte für das Alter der Mondoberfläche vorhanden, so dass große statistische Abweichungen möglich sind.}}
+
+Anhand der Kraterdichte kann das Alter der Mondoberfläche bestimmt werden. Die Kraterdichte ist die Anzahl der Einschlagskrater pro Quadratkilometer. Um ein Rechteck mit bekannter Seitenlänge über das Bild zu legen, muss zunächst der Maßstab berechnet werden. Hierzu können 2 verschiedene Wege genutzt werden: Entweder kann mittels Mondatlas die Größe eines Referenzkraters in einer gewählten Region bestimmt werden. Oder es wird über die optischen Eigenschaften des Teleskops und der Kamera der Abbildungsmaßstab berechnet. Eine genaue Bestimmung des Kraters auf einem Mondatlas ist die wesentlich präzisere Methode.
 
 Nach \ref{eq:bildgroesse} ist die Bildgröße des Mondes leicht zu berechnen. Das Bild entspricht dem Gesamtdurchmesser des Mondes von annähernd $d = \SI{3500}{km}$. Die Größe der Kamerachips oder die Pixelgröße ist bekannt. Der Maßstab $M$ in Kilometer pro Pixel kann berechnet werden durch
 
@@ -423,7 +425,7 @@ M = \frac{s_{px}}{B} \cdot \SI{3500}{km}
 \label{eq:masstab}
 \end{equation}
 
-VORSICHT: Dieser Maßstab bezieht die Wölbung des Mondbildes noch nicht mit ein. Der Maßstab ist daher nur in einem kleinen Bereich in der Mitte des Mondes annähernd richtig, beziehungsweise entlang einer Kreislinie, deren Mittelpunkt im Mondzentrum liegt.
+VORSICHT: Dieser Maßstab bezieht die Wölbung des Mondbildes noch nicht mit ein. Der Maßstab ist daher nur in einem kleinen Bereich in der Mitte des Mondes annähernd richtig, beziehungsweise entlang eines Kreisbogens, deren Mittelpunkt im Mondzentrum liegt.
 
 \begin{figure}[h!]
   \centering
