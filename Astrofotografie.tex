@@ -355,6 +355,12 @@ Zur Fotografie mit der ALCCD 5L-IIm wird die Software EZPlanetary, sowie der Tre
 \item Für jeden Farbkanal auf den REC-Knopf drücken.
 \item Nach Aufnahme der Farbkanäle die aufgenommenen Dateien aussagekräftig umbenennen und auf den Datei-Server verschieben.
 \end{enumerate}
+
+\subsection{QHY8}
+Für Spektren wird die QHY8 zusammen EZCap verwendet. Wichtig ist, dass das Bild nach jeder Aufnahme gespeichert wird, da sonst das Programm abstürzt.
+
+Zur späteren Eichung der Wellenlängen sollte zunächst ein Stern mit deutlichen H-alpha, H-beta und H-gamma Linien aufgenommen werden. Anschließend sollte der Aufbau nicht mehr verändert werden und die eigentlichen Messobjekte aufgenommen werden.
+
 \section{Bildbearbeitung}
 \subsection{Planeten}
 Die Bildbearbeitung erfolgt in mehreren Schritten. Die Benutzung der einzelnen Programme ist in jeweils einem eigenen Abschnitt erklärt.
@@ -410,6 +416,15 @@ Das finale RGB Bild kann jetzt zur Sicherheit wieder gespeichert werden. Letzten
 Das entsättigte Luminanz-Bild wird zunächst wieder über den \textit{Datei \textgreater Öffnen}-Dialog geöffnet. Zum Erstellen des LRGB-Bildes wird nun der Menüpunkt \textit{Bilder Kombinieren \textgreater L+RGB Bild kombinieren nicht skaliert} gewählt.
 
 Eine Fein-Optimierung des Bildes kann jetzt noch mit den verschiedenen Bildbearbeitungsoptionen von Giotto oder Gimp geschehen.
+
+\subsection{Spektren}
+Aufgenommene Spektren müssen zunächst so rotiert werden, dass das aufgenommene Spektrum möglichst horizontal im Bild liegt. Das kann beispielsweise zur Hilfenahme des Werkzeugs \textit{Ebene} \textgreater \textit{Transformieren} \textgreater \textit{beliebige Rotation} von GIMP geschehen.
+
+Anschließend kann der Bereich des Spektrums ausgeschnitten werden. Dabei sollte das komplette Breite des Bildes mit ausgeschnitten werden, damit die verschiedenen Aufgenommen Spektren später verglichen werden können. Das bedeutet, dass die Zuordnung von Pixel zu Wellenlänge in allen Spektren gleich bleibt. Das resultierende Bild sollte ungefähr 10 Pixel hoch und 3328 Pixel breit sein.
+
+Die Helligkeiten können nun vertikal gemittelt werden, um das Rauschen zu reduzieren. Dazu kann ein kleines Python-Programm genutzt werden, welches frei heruntarladbar ist: \href{https://github.com/svenseeberg/evaluate-spectrum}{https://github.com/svenseeberg/evaluate-spectrum}
+
+Die resultierende CSV-Datei kann dann mit SciDavis oder einem anderen Programm geöffnet und weiter verarbeitet werden.
 
 \section{Auswertung}
 \subsection{Altersbestimmung der Mondoberfläche}
