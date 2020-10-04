@@ -110,6 +110,14 @@ Saturn & 116 000 & 1 204 280 000 & 1 652 480 000\\
 \end{table}
 
 \section{Grundlagen der Fotografie}
+\subsection{Spektrum des Lichts}
+Falls nur der Versuchsteil \textit{Planetenfotografie} durchgeführt wird, kann dieser Abschnitt übersprungen werden. Als Einleitung für das Thema Spektroskopie werden folgende Artikel zur Einführung empfohlen:
+\begin{itemize}
+\item \url{https://de.wikipedia.org/wiki/Licht}
+\item \url{https://de.wikipedia.org/wiki/Spektrallinie}
+\item \url{https://de.wikipedia.org/wiki/Astrospektroskopie}
+\end{itemize}
+
 \subsection{Farbbilder}
 Bilder werden auf Computern in Form einer Sammlung von rechteckig angeordneten Pixeln, welche \href{https://de.wikipedia.org/wiki/Rastergrafik}{kleinste Bildeinheiten} sind, dargestellt. In den einfachsten Bildformaten, wir nehmen hier die \href{https://de.wikipedia.org/wiki/Windows_Bitmap}{Bitmap}, trägt jedes Pixel für seine Fläche eine Farb- und Helligkeitsinformation. Der Farb- und Helligkeitswert wird beispielsweise als Rot-Grün-Blau-Wert (RGB) gespeichert. Für jede der drei genannten Farben gibt es dann einen Helligkeitswert zwischen 0 und 255. Durch die Kombination der drei Farben können dann insgesamt bis 16 Millionen verschiedene Farben dargestellt werden. Sind die drei RGB-Werte genau gleich, handelt es sich um eine Graufstufe, dabei ist (0, 0, 0) Schwarz und (255, 255, 255) Weiß. Der Farbwert (255, 0, 0) ist dann beispielsweise die Farbe Rot. Zur Speicherung von 256 verschiedenen Kombinationen benötigt man am Computer genau 1 Byte, das heißt 8 Bit. 1 Bit kann dabei nach dem Binärsystem immer entweder 0 oder 1 sein. Sofern es 256 Farbwerte pro Farbkanal gibt, spricht man von einer so genannten Farbtiefe von 8 Bit. Um Bildinformationen von Licht an den PC zu übertragen, werden CCD- oder CMOS-Fotosensoren genutzt.
 \begin{figure}[h!]
@@ -279,9 +287,7 @@ ALccd 5L-IIm & $f \approx \SI{2410}{\mm}$ & $f \approx \SI{4820}{\mm}$ \\
 \end{table}
 
 \subsubsection{Spektrographie}
-Eine gute Einleitung für den Baader DADOS-Spektragraphen ist hier zu finden: \url{http://www.baader-planetarium.de/dados/download/tutorial-dados-d.pdf}
-
-Zusätzlich steht eine QHY8 CCD-Kamera zur Verfügung. Eine Anleitung ist hier verfügbar: \url{www.qhyccd.com/files/QHY8L\%20user\%20manual.pdf}
+Ebenso wie bei der Planetenfotografie, lohnt es sich bei der Spektroskopie nicht, eine zu große Brennweite zu haben. Im Regelfall kann auch weit oberhalb der Auflösungsgrenze gearbeitet werden. Neben dem Auflösungsvermögen des Teleskops gibt es noch ein Auflösungsvermögen des Spektroskops, das unter anderem von der Spaltbreite des Spektrographen abhängt, sowie der Pixelgröße der sich dahinter befindlichen Kamera, beziehungsweise ihres Abstands zum Gitter.
 
 \subsubsection{Deep-Sky}
 Es steht eine QHY8 CCD-Kamera zur Verfügung. Eine Anleitung ist hier verfügbar: \url{www.qhyccd.com/files/QHY8L\%20user\%20manual.pdf}
@@ -356,12 +362,16 @@ Zur Fotografie mit der ALCCD 5L-IIm wird die Software EZPlanetary, sowie der Tre
 \item Nach Aufnahme der Farbkanäle die aufgenommenen Dateien aussagekräftig umbenennen und auf den Datei-Server verschieben.
 \end{enumerate}
 
-\subsection{QHY8}
+\subsection{Spektrograph und QHY8}
+Anleitungen zu den Geräten finden sich im Netzlaufwerk der Sternwarte im Ordner Anleitungen, sowie auf \url{https://stw-r.de/manuals/}.
+
 Bei der Montage des DADOS und der QHY8 ist darauf zu achten, dass das Spektrum möglichst parallel zur langen Seite des CCD-Chips projiziert wird. Das reduziert die nötige Rotation des Spektrums bei der Bearbeitung.
 
 Für die Aufnahme der Spektren wird die QHY8 zusammen EZCap verwendet. Wichtig ist, dass das Bild nach jeder Aufnahme gespeichert wird, da sonst das Programm abstürzt.
 
 Zur späteren Eichung der Wellenlängen sollte zunächst ein Stern mit deutlichen H-alpha, H-beta und H-gamma Linien aufgenommen werden. Anschließend sollte der Aufbau nicht mehr verändert werden und die eigentlichen Messobjekte aufgenommen werden.
+
+Bei der Belichtung eines Sterns sollte der mittlere Spalt verwendet werden. Er ist mit $25\mu m$ Breite am schmalsten und hat die beste spektrale Auflösung. Je mittiger in der Linie fotografiert wird, desto geringer ist die Bildwölbung des resultierenden Fotos und desto präziser ist das Spektrum auswertbar.
 
 \section{Bildbearbeitung}
 \subsection{Planeten}
