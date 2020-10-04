@@ -289,6 +289,10 @@ ALccd 5L-IIm & $f \approx \SI{2410}{\mm}$ & $f \approx \SI{4820}{\mm}$ \\
 \subsubsection{Spektrographie}
 Ebenso wie bei der Planetenfotografie, lohnt es sich bei der Spektroskopie nicht, eine zu große Brennweite zu haben. Im Regelfall kann auch weit oberhalb der Auflösungsgrenze gearbeitet werden. Neben dem Auflösungsvermögen des Teleskops gibt es noch ein Auflösungsvermögen des Spektroskops, das unter anderem von der Spaltbreite des Spektrographen abhängt, sowie der Pixelgröße der sich dahinter befindlichen Kamera, beziehungsweise ihres Abstands zum Gitter.
 
+Für die Belichtung gelten bei der Spektroskopie die gleichen Regeln wie bei der Planetenfotografie. Da das Bild aber nicht geschärft wird, darf die Belichtungszeit so gewählt werden, dass die maximale Intensität bei einem Helligkeitswert von 80 \% bis 90\% der maximalen Farbtiefe liegen kann.
+
+Technisch ist es auch möglich, mehrere Bilder zu erstellen und daraus ein Mittelwertbild zu erstellen, um das Rauschen zu reduzieren. Praktischerweise genügt es allerdings häufig schon, über die 10 Pixel der Breite des Spektrums zu mitteln, um das Rauschen deutlich zu reduzieren. Für einfachere Anwendungsfälle genügt es daher, ein einzelnes scharfes Bild des Spektrums zu erzeugen.
+
 \subsubsection{Deep-Sky}
 Es steht eine QHY8 CCD-Kamera zur Verfügung. Eine Anleitung ist hier verfügbar: \url{www.qhyccd.com/files/QHY8L\%20user\%20manual.pdf}
 
@@ -369,7 +373,7 @@ Bei der Montage des DADOS und der QHY8 ist darauf zu achten, dass das Spektrum m
 
 Für die Aufnahme der Spektren wird die QHY8 zusammen EZCap verwendet. Wichtig ist, dass das Bild nach jeder Aufnahme gespeichert wird, da sonst das Programm abstürzt.
 
-Zur späteren Eichung der Wellenlängen sollte zunächst ein Stern mit deutlichen H-alpha, H-beta und H-gamma Linien aufgenommen werden. Anschließend sollte der Aufbau nicht mehr verändert werden und die eigentlichen Messobjekte aufgenommen werden.
+Zur späteren Eichung der Wellenlängen sollte zunächst ein Stern mit deutlichen H-alpha, H-beta und H-gamma Linien aufgenommen werden. Anschließend sollte der Aufbau nicht mehr verändert werden und die eigentlichen Messobjekte aufgenommen werden. Außerdem kann ein heller Stern (oder die Laborlichtquelle) dazu genutzt werden, die Kamera in den Fokus des Spektrographen zu bringen.
 
 Bei der Belichtung eines Sterns sollte der mittlere Spalt verwendet werden. Er ist mit $25\mu m$ Breite am schmalsten und hat die beste spektrale Auflösung. Je mittiger in der Linie fotografiert wird, desto geringer ist die Bildwölbung des resultierenden Fotos und desto präziser ist das Spektrum auswertbar.
 
